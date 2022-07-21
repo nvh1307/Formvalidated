@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+
+:root{
+    --success-color : #2691d9;
+    --error-color: #e74c3c;
+
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(120deg, #3ca7ee,#9b408f);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.container{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    padding: 40px;
+
+}
+
+.container .form-control{
+    width: 100%;
+    padding-bottom: 25px;
+    position: relative;
+}
+.container .form-control input{
+    width: 100%;
+    border: none;
+    border-bottom: 2px black solid;
+    height: 50px;
+    outline: none;
+    font-size: 16px;
+
+}
+.container .form-control span{
+    position: absolute;
+    border-bottom: 3px solid var(--success-color);
+    width: 0%;
+    left: 0;
+    top: 48px;
+    transition: 0.8s;
+}
+.form-control input:focus ~ span{
+    width: 100%;
+}
+.form-control.error small{
+    color: var(--error-color);
+
+}
+.form-control.error input{
+    border: 2px solid var(--error-color);
+}
+
+.login{
+    width: 100%;
+    height: 50px;
+    background: #164e73;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 20px;
+    outline: none;
+    font-weight: bold;
+    margin: 25px 0px;
+    transition: 0.5s;
+
+}
+
+.signup-link{
+    font-size: 20px;
+    font-weight: 600px;
+    text-align: center;
+
+}
+
+.signup-link a{
+    text-decoration: none;
+    color: #2691d9;
+}
+
+.signup-link a:hover{
+    text-decoration: underline;
+    color: #164e73;
+}
+.login:hover{
+    background: #3ca7ee;
+}
